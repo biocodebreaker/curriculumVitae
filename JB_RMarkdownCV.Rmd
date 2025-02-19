@@ -24,7 +24,7 @@ library(tibble)
 library(dplyr)
 ```
 
-# Education
+# Education 
 
 ```{r}
 tribble(
