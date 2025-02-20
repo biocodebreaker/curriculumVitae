@@ -20,5 +20,5 @@ packageVersion("rmarkdown")
 vignette(package = "vitae")
 vignette("vitae", package = "vitae")
 
-# Render to PDF
+# Render to PDF (Output created: JB_RMarkdownCV.pdf)
 rmarkdown::render("JB_RMarkdownCV.Rmd", output_format = "vitae::awesomecv")
