@@ -1,0 +1,251 @@
+---
+name: "Johnbosco"
+surname: "Tayebwa"
+position: "Bioinformatician"
+address: "School of Allied Health Sciences, Kampala International University (KIU), Uganda"
+profilepic: "./Johnbosco Tayebwa2.png"
+#www: "https://scholar.google.com/citations?hl=en&user=9vSAthMAAAAJ"
+phone: "+256 784362367"
+email: "johnboscotayebwa@kiu.ac.ug"
+github: biocodebreaker
+linkedin: Johnbosco Tayebwa
+orcid: 0000-0002-2355-8475
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: 990000
+aboutme: "I am a Bioinformatician with a background in Biomedical Laboratory Technology and Bioinformatics. I have a Master of Science in Bioinformatics from the University of Skovde, Sweden. I have more than 10 years of experience in the management and analysis of high-throughput data from Next-Generation Sequencing Platforms, especially Illumina. I have worked as a Bioinformatician at the Department of Clinical Genetics, Lund University Hospital, Sweden, and as a Visiting Postgraduate Researcher at the School of Biosciences, University of Exeter, United Kingdom. I am currently an Assistant Lecturer/Research Scientist at the School of Allied Health Sciences, Kampala International University, Uganda. I am also the Head of Department of Medical Laboratory Sciences at Kampala International University. My research interests include the study of the Tumor Microenvironment (TME) in Gastric Cancer, Cervical Cancer, and other cancers using bioinformatics tools. I am also interested in Machine Learning and Artificial Intelligence in Cancer Research. I am a member of the International Society for Computational Biology (ISCB)."
+docname: CV
+output: vitae::awesomecv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+library(dplyr)
+```
+
+# Education 
+
+```{r}
+tribble(
+  ~ degree, ~ year, ~ institution, ~ where,
+"University of Skovde", "Sweden", "Master of Science in Bioinformatics", "2011-2012",
+"Makerere University", "Uganda", "Bachelor of Biomedical Laboratory Technology, Second Class Honours – Upper Division", "2005-2008"
+) %>% 
+  detailed_entries(what = degree, when = year, with = institution, where = where)
+```
+
+# Professional Experience
+
+```{r}
+tribble(
+  ~ role, ~ year, ~ company, ~ details,
+  "School of Allied Health Sciences, Kampala International University",  "Current", "Assistant Lecturer/Research Scientist", "Uganda",  
+ "Department of Medical Laboratory Sciences, Kampala International University", "2021-2023", "Head of Department",  "Uganda",
+"Department of Clinical Genetics, Lund University Hospital", "2012-2014", "Bioinformatician",  "Sweden",
+"School of Biosciences, University of Exeter", "2010-2011", "Visiting Postgraduate Researcher", "United Kingdom"
+) %>% 
+  detailed_entries(what = role, when = year, with = company, why = details)
+```
+
+# Skills
+
+```{r}
+tribble(
+  ~ skill, ~ details,
+  "Programming", "Advanced skills in Linux-Unix bash/shell, R statistical programming, GitHub and Perl",
+  "High Performance Computing", "Experience with HPC clusters (UPPMAX, SNIC) and cloud computing (Amazon AWS, docker)",
+  "NGS Data Analysis", "More than 5 years of experience in management and analysis of high-throughput data from Next-Generation Sequencing Platforms, especially Illumina",
+  "Microarray Analysis", "Experience with gene expression array and microarray (SNP-array) data analysis"
+) %>% 
+  detailed_entries(what = skill, why = details)
+```
+
+# Research Focus Area
+
+My broad interest is integrating various high-dimensional omics datasets such as genomics, transcriptomics, proteomics, metabolomics etc to develop next-generation immunotherapy approaches for cancer patients. I am also interested in the application of Single-Cell RNA-Seq for personalized immunotherapy.
+
+My Research Focus area is Cancer Immunotherapy especially immune cell infiltration in the Tumor Microenvironment (TME). I am also interested in using AI/ML for computational modeling to develop better prognostic models for Cancer patients. This includes biomarker discovery.
+
+# Research Experience
+
+# Bioinformatics study of the Tumor Microenvironment (TME) in Gastric Cancer [MANUSCRIPT SUBMITTED FOR REVIEW].
+
+I have conducted a study on immune cell infiltration in the Gastric Cancer (GC) Tumor Microenvironment (TME) using the TCGA Gastric Cancer dataset. Gene expression data (mRNA RNA-Seq) of 448 Gastric Cancer (Stomach Adenocarcinoma) cases were downloaded from the Genomic Data Commons Portal TCGA-STAD project. 
+
+The study aimed to identify Immune-Related Genes (IRGs) that have a significant impact on the survival of GC patients. These IRGs that can predict the prognosis of GC patients can act as biomarkers for predicting patient outcomes. They can also be targeted for cancer immunotherapy. 
+
+Based on risk score calculation, we established a prognostic risk model comprising of eight differentially expressed Immune-Related Genes (IRGs) which were the best at predicting Overall Survival at the 1-year, 3-year and 5-year time points. 
+
+Using univariate and multivariate analyses, three (3) Immune-Related DEGs emerged as independent prognostic factors and it was shown that their risk scores were significantly correlated with the infiltration levels of some but not all immune cell types. 
+For validation of the prognostic Immune-Related DEGs, two microarray Gastric Cancer datasets (433 GC samples) were obtained from the Gene Expression Omnibus (GEO) database. 
+
+We observed that among the 448 TCGA tumors, 10 out of the 22 immune cell types had significantly different immune cell proportions between tumors and normal samples in both the paired and unpaired comparisons. We suggested that these 10 immune cells whose proportions were consistently different in tumors compared to normal samples may constitute a unique Tumor Infiltrating Leukocyte Phenotype/signature which is enriched in tumors but not normal samples, which may not only have prognostic significance but also immune therapy implications, thus deserves further research [MANUSCRIPT SUBMITTED FOR REVIEW]. 
+
+
+# Study on the role of immune cell infiltration and oxidative stress in the Tumor Microenvironment (TME) of Cervical Cancer [MANUSCRIPT IN PREPARATION]. 
+
+# A Machine Learning Model to Predict the Prognosis of Cervical Cancer Patients based on Oxidative Stress-Related Genes (OS-Related DEGs) and Immune Cell Infiltration.
+
+**Study Justification**: Recent studies have shown that immune cell infiltration and oxidative stress are key components of the tumor microenvironment (TME) that influence the progression and prognosis of cervical cancer. Effective prognostic models are crucial to predict patient outcomes, guide treatment strategies, and improve survival rates. Investigating genes associated with oxidative stress could provide valuable insights into the molecular mechanisms driving cervical cancer and identify potential therapeutic targets.
+
+**Study Methodology**
+Bulk tissue RNA-Seq expression data for cervical tissues were obtained from publicly available databases. 306 cervical cancer samples, consisting of 304 primary tumors and 2 metastatic samples, were obtained from The Cancer Genome Atlas (TCGA) through the GDC Portal. 
+A total of 22 normal cervical tissue samples: 19 samples (endocervix, n = 10; and ectocervix, n = 9) were retrieved from the the Genotype-Tissue Expression (GTEx) Portal, and 3 normal cervix uteri samples were obtained from the TCGA-CESC project. 
+
+Oxidative stress-related genes were downloaded from the GeneCards website and the Molecular Signatures Database (MSigDB).
+
+The limma R package was used to identify the OS-Related DEGs between the 306 Tumor and 22 Normal samples. 
+
+65 OS-Related DEGs between Tumor and Normal samples in the TCGA-GTEx, GSE63514 and GSE39001 Cervical Cancer datasets were significant in the Univariate analysis.
+
+The Multivariate Cox Proportional Hazards Model identified three (3) OS-Related DEGs (DSG2, JTB and PTTG1) as significant independent predictors of Overall Survival of Cervical Cancer patients. 
+
+=> Generate a t-distributed Stochastic Neighbor Embedding (t-SNE) plot to visualize the distribution of the Tumor and Normal samples based on the expression of the 65 OS-Related DEGs.
+
+TCGA, GTEx and GEO Datasets to be used in the Training cohort and validation cohort have been identified. They were divided into two cohorts: the Training Cohort and Validation cohort.
+
+Training Cohort:  TCGA Primary tumors (306); TCGA-GTEx Normal (22); GEO (GSE39001, GSE63514).
+Validation cohort: GSE44001 (300 tumor samples).
+
+The 'glmnet' and the ‘randomForestSRC’ machine learning R packages are being used in the development, training and validation of the prognostic risk model to select the most appropriate genes from the Prognostic OS-related DEGs. 
+
+SOME OF THE DATA SCIENCE PROJECTS I HAVE WORKED ON: 
+
+While at Kampala International University (KIU), I observed overtime that most Early-Career Researchers in the Life Sciences in Uganda/Africa use SPSS and/or STATA for data analysis in their research. This tradition persists despite the availability of more powerful, flexible, and scalable data science platforms like Posit Cloud (formerly RStudio).
+When I became Head of Department (HoD) in the Department of Medical Laboratory Sciences at KIU, I introduced a series of workshops and seminars to train postgraduate students and staff in the use of R for data analysis. 
+
+# using  Posit-Cloud/RStudio + GitHub for Reproducible bioinformatics research. 
+My major goal is to reproduce the work that is in the attached published article (Zhao et al., 2022; https://doi.org/10.3389/fgene.2022.1013571).
+
+STEPS: Tutorial on Reproducibility of Bioinformatics Research using R and GitHub. 
+1. We selected a PURELY BIOINFORMATICS recently published study ON CERVICAL Cancer from PubMed (https://doi.org/10.3389/fgene.2022.1013571). 
+2. We opened a GitHub repository and named it "Reproduce-HMAG-Signature-Cervical-Cancer". 
+3. We opened a README.md file and assigned the MIT License.
+The README.md file contains Study Information, Datasets, required R packages and instructions on how to set up the R environment and install the required R packages. 
+4. After setting up the GitHub Repository, we used the URL of the GitHub Repository (https://github.com/biocodebreaker/Reproduce-HMAG-Signature-Cervical-Cancer) to deploy the RStudio Project (16GB RAM, 4CPU). 
+
+The study used gene expression and clinical data from three independent clinical cohorts: TCGA-CESC, GSE44001 and GSE52903.
+
+# Skills acquired
+
+Using the Genomic Data Commons (GDC) Data Transfer Tool to download TCGA data.
+
+=> Conducting an automated literature review to identify the research gap using PubMed, Google Scholar, and other academic search engines. 
+=> Using PubMed parser to extract the metadata of the selected articles e.g. pmid, title, abstract, authors, journal, publication date, doi, etc.
+=> Publishing the automated literature review using GitHub Pages for easy sharing and collaboration.
+
+=> Using the Linux Terminal for data analysis tasks.
+=> Using the R console/IDE for data analysis tasks.
+=> Using Python packages/Libraries for data analysis tasks.
+=> Using R Notebook or Jupyter Notebooks to document and run code interactively.
+
+=> Developing a a FAIR-compliant, machine-readable, modern, data-driven GitHub-hosted project website powered by RStudio, which can be easily updated when the underlying data in the RStudio project changes.
+
+=> Developing end-to-end data analysis workflows using R and GitHub.
+
+=> Using R Markdown and Quarto for publishing reproducible research reports and data-driven manuscripts e.g. PapersWithCode. 
+
+# My GitHub skills:
+=> Using the proper branch master vs main to ensure code is correctly committed to the right branch.
+=> using the Personal Access Token instead of the Password to ensure secure access to the GitHub repository.
+
+
+=> Using Linux bash/shell scripting for automation of data analysis tasks, e.g. GNU parallel for parallel processing of multiple files.
+
+=> Using R Bioconductor or CRAN (Comprehensive R Archive Network) packages for data analysis. 
+
+=> saving R objects to disk using the saveRDS() function and loading them using the readRDS() function for easy sharing with collaborators to ensure reproducibility.
+=> saving the data to an RData file using the save() function and loading it using the load() function to maintain a consistent dataset that can be reused across projects and platforms. 
+
+=> committing my work to a GitHub repository using the git version control system.
+=> Using sessionInfo() to record the R version and the versions of the R packages used in the analysis for reproducibility.
+=> Using Docker for containerization of the R environment: Packaging everything (scripts, dependencies, environment) into a Docker image for easy sharing and reproducibility across different platforms.
+=> Generating a a flow diagram (flow chart) showing the steps of our analysis. 
+=> Usimg the TCGAbiolinks R package for data collection and preprocessing of TCGA data.
+=> Using the GEOquery R package for data collection and preprocessing of GEO data.
+
+=> Determining overall survival (OS) and disease-free survival (DFS) using TCGA and GEO data. 
+=> Removal of Batch Effects using R packages like sva, ComBat and merging the cohorts after batch effect removal.
+=> Using the the Molecular Signatures Database (MSigDB) for ontology analysis.
+=> Gene Set Variation Analysis (GSVA) using the GSVA package R package.
+=> Using the limma R package for Differentially Expressed Genes (DEGs) analysis.
+=> Using the clusterProfiler R package for Gene Ontology (GO) and Kyoto Encyclopedia of Genes and Genomes (KEGG) pathway enrichment analysis.
+=> Using the survival R package for survival analysis.
+=> Using the ggplot2 R package for data visualization.
+=> Univariate and multivariate Cox regression analysis using the survival R package.
+=> Receiver Operating Characteristic (ROC) curve analysis.
+=> Using the glmnet R package for LASSO regression analysis.
+
+
+the R code to reproduce the analysis was encapsulated in a yaml configuration file such that we have the input files/data (e.g. Tables and Figures) and output files/results were well documented. Snakemake was used to run the workflow. 
+
+Reproducibility is now one of the most desirable tenets of academic/scientific publishing yet authors typically do not provide the code alongside their manuscripts. I am currently spearheading Reproducible Bioinformatics in the Department of Medical Laboratory Sciences at Kampala International University. 
+
+As Head of Department, I am training my postgraduate students to reproduce the paper published on Cervical Cancer so that they appreciate the importance of having reproducible workflows and providing code alongside the manuscript so that others can build on it. This work can be found here: [https://github.com/biocodebreaker/Reproduce-HMAG-Signature-Cervical-Cancer]. 
+Another project we are working on is a multi-omics study that integrates various omics datasets (genomics, transcriptomics, metabolomics, etc) that uses best-practice recommendations like version control (github) [https://github.com/biocodebreaker/cervical-cancer-multiomics-study].
+
+# current experiences and future plans for knowledge sharing and community building
+
+I joined GitHub Education and I am implementing GitHub Classroom for postgraduate students in my Department for the Research Methodology Course Unit. We are following best-practice recommendations like integrating Posit-Cloud with GitHub. We have been using the Cloud Instructor (for Educators and Students) Pricing Plan on Posit Cloud.
+
+# FAIR GUIDING PRINCIPLES
+Our work inherently implements the FAIR Guiding Principles of Findability, Accessibility, Interoperability and Reusability [see Link 3]. We shall distribute the Research Outputs from our projects via preprint servers, and other tools like Zenodo, Figshare for easier Accessibility and Reusability.
+I'm also a participant in the Global-Campus-Teachers (Github Education) Community where I actively participate and contribute to Discussions on this Teachers' Email Forum. 
+
+I also introduced the use of R Markdown for reproducible research. This initiative has been well received and has led to a significant increase in the use of R for data analysis in the department.
+
+```{r}
+tribble(
+  ~ role, ~ year, ~ institution, ~ details,
+  "Bioinformatician", "2012-2014", "Department of Clinical Genetics, Lund University Hospital", "Analyzed NGS data (WGS, WES, TruSeq, RNA-Seq) for bone and soft tissue tumor studies. Developed pipelines for variant calling, fusion gene detection, and differential expression analysis.",
+  "Visiting Postgraduate Researcher", "2010-2011", "School of Biosciences, University of Exeter", "Developed competence in Linux environment and Perl scripting. Assembled bacterial genomes and developed in-silico primers for Xanthomonas species."
+) %>% 
+  detailed_entries(what = role, when = year, with = institution, why = details)
+```
+
+# Selected Publications
+
+I have a dozen publications including one where I'm First Author (shared), one in **Nature Genetics**, and a Review Article on the Methods used in Cancer Research.
+
+For a complete list of publications, please visit: \href{https://scholar.google.com/citations?user=PZ6u9ocAAAAJ}{Google Scholar Profile}.
+
+# Professional Membership
+
+Member of the International Society for Computational Biology (ISCB)
+
+# Honors & Awards
+
+```{r}
+tribble(
+  ~ award, ~ year, ~ institution,
+"Position 136 in Uganda; Position 16 at KIU; Category: Digital Health Technologies | Health Informatics", "2022",  "Top 500 Scientists in Uganda - AD Scientific Index",
+  "Swedish Institute", "2011-2012", "Swedish Institute Scholarship",
+   "NARO/WORLD BANK PROJECT", "2010-2011", "Millennium Science Initiative Research Grant",
+  "Muljibhai Madhvani Foundation", "2006-2008", "Muljibhai Madhvani Foundation scholarship"
+) %>% 
+  detailed_entries(what = award, when = year, with = institution)
+```
+
+# References
+
+1. **Anthony Mukwaya, PhD**  
+   Research Scientist/Research Fellow  
+   Department of Ophthalmology, Harvard Medical School  
+   Schepens Eye Research Institute, Boston, MA, USA  
+   **Email:** amukwaya@meei.harvard.edu  
+   **Tel:** +1 617 4609884  
+
+2. **David Studholme, PhD**  
+   Associate Professor in Bioinformatics  
+   School of Biosciences, University of Exeter  
+   Exeter, UK  
+   **Email:** D.J.Studholme@exeter.ac.uk  
+   **Tel:** +44 (0) 1392 724678  
+
+3. **Fredrik Mertens, MD, PhD**  
+   Professor, Senior Consultant  
+   Department of Clinical Genetics, University Hospital  
+   Lund, Sweden  
+   **Email:** Fredrik.Mertens@med.lu.se  
+   **Tel:** 0046 46 173387  
